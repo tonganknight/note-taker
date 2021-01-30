@@ -1,3 +1,5 @@
+
+
 let noteTitle;
 let noteText;
 let saveNoteBtn;
@@ -160,6 +162,8 @@ const renderNoteList = async (notes) => {
     li.dataset.note = JSON.stringify(note);
 
     noteListItems.push(li);
+
+    addEventListener("click", renderActiveNote()) // adds event listener to notes
   });
 
   if (window.location.pathname === '/notes') {
@@ -168,13 +172,29 @@ const renderNoteList = async (notes) => {
 };
 
 // Gets notes from the db and renders them to the sidebar
-const getAndRenderNotes = () => getNotes().then(renderNoteList);
+const getAndRenderNotes = () => getNotes().then(renderNoteList)
+
+// const notecount = document.querySelector(".list-group").childElementCount;
+
+// if(notecount > 0){
+
+//   for(i=0; i< notecount){  
+//   addEventListener('click', renderActiveNote())
+  
+// }
 
 if (window.location.pathname === '/notes') {
   saveNoteBtn.addEventListener('click', handleNoteSave);
   newNoteBtn.addEventListener('click', handleNewNoteView);
   noteTitle.addEventListener('keyup', handleRenderSaveBtn);
   noteText.addEventListener('keyup', handleRenderSaveBtn);
+
+
+
+  // for(i =0; )
+  // document.getElementsByClassName('list-group-item').
+  
+  
 }
 
 getAndRenderNotes();
