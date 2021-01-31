@@ -17,15 +17,15 @@ To use this application you will need to have node installed, and express.js. Yo
 
 ## Usage
 
-To use this application download it from github, and open it in vs code. Navigate to the root directory and type "npm start" once it going open your browser and type localhost:3001. This should show you the page. 
+To use this application download it from github, and open it in vs code. Navigate to the root directory and type "npm start" once it going open your browser and type localhost:3001. This should show you the page. You can also visit the deployed version here https://guarded-tor-26852.herokuapp.com/
 
 ## Features
 
-List noets, save notes, 
+List notes, save notes, 
 
 ## Testing 
 
-To test this project follow the usage information. It will allow you to launch the application
+To test this application please visit the deployed link here https://guarded-tor-26852.herokuapp.com/
 
 ## Credits
 
