@@ -59,32 +59,21 @@ app.post("/api/notes", (req, res) => {
        
 });
 
-db.forEach( dbid =>{
+// db.forEach( dbid =>{
 
-    let arr = db
+//     let arr = db
 
-    let title =db.title
+//     let title =db.title
 
-    console.log(title)
+//     console.log(title)
 
  
-})
+// })
     
-    
-
-
-
-
-
 
 app.delete('/api/notes/', (req, res) =>{
     res.sendFile(path.join(__dirname, "./db/db.json"))
 });
-
-
-
-
-
 
 app.listen(PORT, () => {
     console.log(`API Server now on port ${PORT}!`);
