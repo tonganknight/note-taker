@@ -20,8 +20,6 @@ app.get("/", (req, res) => {
 
 })
 
-
-
 app.get("/notes", (req, res) => {
     res.sendFile(path.join(__dirname, "./public/notes.html"));
     
@@ -39,7 +37,7 @@ app.get("/api/notes", (req, res) =>{
 app.use(express.static(__dirname + '/public'));
 
 
-//post req
+//post req and writing files to Json
 app.post("/api/notes", (req, res) => {
     
   let note = req.body; //this targets our  note
@@ -58,10 +56,29 @@ app.post("/api/notes", (req, res) => {
     oldnotes.push(note);
     fs.writeFileSync(path.join(__dirname, './db/db.json'),
     JSON.stringify(oldnotes), null, 2)
-
-  
-  
        
+});
+
+db.forEach( dbid =>{
+
+    let arr = db
+
+    let title =db.title
+
+    console.log(title)
+
+ 
+})
+    
+    
+
+
+
+
+
+
+app.delete('/api/notes/', (req, res) =>{
+    res.sendFile(path.join(__dirname, "./db/db.json"))
 });
 
 

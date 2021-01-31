@@ -59,7 +59,7 @@ const renderActiveNote = () => {
     noteTitle.setAttribute('readonly', true);
     noteText.setAttribute('readonly', true);
     noteTitle.value = activeNote.title;
-    noteText.value = activeNote.title;
+    noteText.value = activeNote.text;
   } else {
     noteTitle.value = '';
     noteText.value = '';
@@ -174,26 +174,11 @@ const renderNoteList = async (notes) => {
 // Gets notes from the db and renders them to the sidebar
 const getAndRenderNotes = () => getNotes().then(renderNoteList)
 
-// const notecount = document.querySelector(".list-group").childElementCount;
-
-// if(notecount > 0){
-
-//   for(i=0; i< notecount){  
-//   addEventListener('click', renderActiveNote())
-  
-// }
-
 if (window.location.pathname === '/notes') {
   saveNoteBtn.addEventListener('click', handleNoteSave);
   newNoteBtn.addEventListener('click', handleNewNoteView);
   noteTitle.addEventListener('keyup', handleRenderSaveBtn);
   noteText.addEventListener('keyup', handleRenderSaveBtn);
-
-
-
-  // for(i =0; )
-  // document.getElementsByClassName('list-group-item').
-  
   
 }
 
